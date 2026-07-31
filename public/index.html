@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ভিডিও শুরু করুন</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="landing" class="screen">
+    <div class="card">
+      <h1>ভিডিও কল</h1>
+      <p class="hint">Start চাপলে আপনার ক্যামেরা চালু হবে</p>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <div id="waitingScreen" class="screen hidden">
+    <div class="card">
+      <p class="live-dot">🔴 আপনার ভিডিও চালু আছে</p>
+      <video id="localVideo" autoplay playsinline muted></video>
+      <p class="hint">এই পেজটা খোলা রাখুন</p>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
